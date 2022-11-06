@@ -11,7 +11,10 @@ TabWidth: 4
 BreakBeforeBraces: Stroustrup
 # if (x) doStuff()  is not allowed, bad style
 AllowShortIfStatementsOnASingleLine: false
-#
+# no one liners functions
+AllowShortFunctionsOnASingleLine: Empty
+# functions spacing
+SeparateDefinitionBlocks: Always
 AlignTrailingComments: true
 SpacesBeforeTrailingComments: 3
 # change the next line to All for Alistair's textbook style
