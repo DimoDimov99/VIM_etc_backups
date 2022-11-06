@@ -1,6 +1,9 @@
-:autocmd BufNewFile *.c 0r ~/.config/nvim/templates/template.c
+autocmd BufNewFile *.c 0r ~/.config/nvim/templates/template.c
 autocmd FileType c,cpp setlocal equalprg=clang-format "autoformat with clang using G=gg keyboard shortcut
+autocmd BufRead,BufNewFile *.c set syntax=c
 set nocompatible
+filetype plugin on
+syntax on
 set number
 set autoindent
 set tabstop=4
@@ -11,6 +14,10 @@ set mouse=a
 set expandtab
 set ai
 set termguicolors
+
+if (has("termguicolors"))
+  set termguicolors
+endif
 
 call plug#begin()
 
@@ -28,6 +35,10 @@ Plug 'joshdick/onedark.vim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/tpope/vim-fugitive' "GIT support for nvim
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'https://github.com/rakr/vim-one'
+Plug 'https://github.com/dracula/vim'
+Plug 'shaunsingh/nord.nvim'
 
 call plug#end()
 
@@ -56,10 +67,25 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 :abbr #b /************************************************
 :abbr #e ************************************************/
 
+"Fix theme dracula italic issues
+let g:dracula_italic = 0
+
+set background=dark
+
+"Colorschemes
+"===================================
 "colorscheme embark
-colorscheme onedark
+"colorscheme onedark
 "colorscheme gruvbox
-hi Normal guibg=NONE ctermbg=NONE
+"colorscheme palenight
+"colorscheme nord
+colorscheme dracula
+"===================================
+
+" both guibg= and ctermbg= should be NONE for transparency
+"#171421
+"#22272e
+hi Normal guibg=#282a36 ctermbg=NONE
 
 :hi CursorLine   cterm=underline ctermbg=darkred
 :set cursorline
@@ -83,8 +109,15 @@ set lcs+=space:.
 
 "Show file name on top bar
 set title
+
 "Vim airline shows current working directory
 let g:airline_section_c = '%<%F%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
 
+"Set ariline to corresponding color theme
+let g:airline_theme = "dracula"
+
 "Open NERDTree with F6"
 nmap <F6> :NERDTreeToggle<CR>
+
+"Overwrite dracula colorscheme for comments
+:hi Comment guifg=#63f05b

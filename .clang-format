@@ -3,7 +3,7 @@
 BasedOnStyle: LLVM
 IndentWidth: 4
 # Must be 80 characters or less!
-ColumnLimit: 80
+ColumnLimit: 160
 # spaces, not tabs!
 UseTab: Never
 TabWidth: 4
@@ -21,3 +21,6 @@ SpacesBeforeTrailingComments: 3
 AlignConsecutiveMacros: Consecutive
 # use \n instead of \r\n
 UseCRLF: false
+# one enum per line
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: false
