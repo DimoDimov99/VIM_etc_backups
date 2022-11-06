@@ -50,6 +50,9 @@ inoremap <silent><expr> <Tab>
       \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
 
+" Use enter for auto-completion
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
 :abbr #b /************************************************
 :abbr #e ************************************************/
 
