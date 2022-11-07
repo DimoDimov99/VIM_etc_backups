@@ -14,6 +14,7 @@ set mouse=a
 set expandtab
 set ai
 set termguicolors
+:set textwidth=80
 
 if (has("termguicolors"))
   set termguicolors
@@ -87,8 +88,13 @@ colorscheme dracula
 "#22272e
 hi Normal guibg=#282a36 ctermbg=NONE
 
-:hi CursorLine   cterm=underline ctermbg=darkred
+"Remove comments to have highlighted cursor
+":hi CursorLine   cterm=underline ctermbg=0
 :set cursorline
+"fix to make the cursor only underline without highlight. Remove to have
+"underline and highlight
+:hi clear CursorLine
+:hi CursorLine gui=underline cterm=underline
 
 "Display trailing white space as symbol
 set list
