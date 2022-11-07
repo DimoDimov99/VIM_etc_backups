@@ -130,3 +130,9 @@ nmap <F6> :NERDTreeToggle<CR>
 
 "Overwrite dracula colorscheme for comments
 :hi Comment guifg=#63f05b
+
+" provide hjkl movements in Insert mode and Command-line mode via the <Alt> modifier key
+noremap! <A-h> <Left>
+noremap! <A-j> <Down>
+noremap! <A-k> <Up>
+noremap! <A-l> <Right>
