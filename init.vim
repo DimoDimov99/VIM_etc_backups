@@ -15,6 +15,9 @@ set expandtab
 set ai
 set termguicolors
 :set textwidth=80
+:set ic "ignore case
+"set noic "case-sensitive
+:set smartcase "smart-case search
 
 if (has("termguicolors"))
   set termguicolors
