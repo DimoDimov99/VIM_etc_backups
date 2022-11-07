@@ -7,8 +7,8 @@ ColumnLimit: 160
 # spaces, not tabs!
 UseTab: Never
 TabWidth: 4
-# Curly braces on new line
-BreakBeforeBraces: Stroustrup
+# Curly braces on new line for everything
+BreakBeforeBraces: Allman
 # if (x) doStuff()  is not allowed, bad style
 AllowShortIfStatementsOnASingleLine: false
 # no one liners functions
