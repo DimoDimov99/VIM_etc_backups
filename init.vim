@@ -138,3 +138,10 @@ noremap! <A-h> <Left>
 noremap! <A-j> <Down>
 noremap! <A-k> <Up>
 noremap! <A-l> <Right>
+
+"\+qf - auto fix line
+"\+ac - bring suggestion option menu
+nmap <leader>qf <Plug>(coc-fix-current)
+nmap <leader>ac  <Plug>(coc-codeaction)
+"trigger auto completion with c + space (must be in insert mode)
+inoremap <silent><expr> <c-space> coc#refresh()
