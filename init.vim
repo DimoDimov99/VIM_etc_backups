@@ -1,6 +1,7 @@
 autocmd BufNewFile *.c 0r ~/.config/nvim/templates/template.c
 autocmd FileType c,cpp setlocal equalprg=clang-format "autoformat with clang using G=gg keyboard shortcut
 autocmd BufRead,BufNewFile *.c set syntax=c
+autocmd BufWritePre *.c %s/\s\+$//e "clear all white space when saved .c file
 set nocompatible
 filetype plugin on
 syntax on
@@ -89,7 +90,8 @@ colorscheme dracula
 " both guibg= and ctermbg= should be NONE for transparency
 "#171421
 "#22272e
-hi Normal guibg=#282a36 ctermbg=NONE
+"#282a36
+hi Normal guibg=NONE ctermbg=NONE
 
 "Remove comments to have highlighted cursor
 ":hi CursorLine   cterm=underline ctermbg=0
