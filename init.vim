@@ -2,7 +2,8 @@ autocmd BufNewFile *.c 0r ~/.config/nvim/templates/template.c
 autocmd FileType c,cpp setlocal equalprg=clang-format "autoformat with clang using G=gg keyboard shortcut
 autocmd BufRead,BufNewFile *.c set syntax=c
 autocmd BufWritePre *.c %s/\s\+$//e "clear all white space when saved .c file
-autocmd BufWritePre *.c :normal gg=G "format .c files when save
+"auto-format .c files on save
+autocmd BufWritePre *.c :normal gg=G
 set nocompatible
 filetype plugin on
 syntax on
