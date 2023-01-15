@@ -2,7 +2,7 @@ autocmd BufNewFile *.c 0r ~/.config/nvim/templates/template.c
 autocmd FileType c,cpp setlocal equalprg=clang-format "autoformat with clang using G=gg keyboard shortcut
 autocmd BufRead,BufNewFile *.c set syntax=c
 autocmd BufWritePre *.c %s/\s\+$//e "clear all white space when saved .c file
-"auto-format .c files on save
+"auto-format *.c files on save
 autocmd BufWritePre *.c :normal gg=G
 set nocompatible
 filetype plugin on
@@ -17,7 +17,7 @@ set mouse=a
 set expandtab
 set ai
 set termguicolors
-:set textwidth=80
+":set textwidth=80
 :set ic "ignore case
 "set noic "case-sensitive
 :set smartcase "smart-case search
@@ -128,6 +128,9 @@ let g:airline_section_c = '%<%F%m %#__accent_red#%{airline#util#wrap(airline#par
 
 "Set ariline to corresponding color theme
 let g:airline_theme = "dracula"
+
+"Set g:python3_host_prog
+let g:python3_host_prog = "/usr/bin/python3"
 
 "Open NERDTree with F6"
 nmap <F6> :NERDTreeToggle<CR>
