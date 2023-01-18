@@ -21,6 +21,8 @@ set termguicolors
 :set ic "ignore case
 "set noic "case-sensitive
 :set smartcase "smart-case search
+set t_Co=256 "better colors
+
 
 if (has("termguicolors"))
   set termguicolors
@@ -136,7 +138,9 @@ let g:python3_host_prog = "/usr/bin/python3"
 nmap <F6> :NERDTreeToggle<CR>
 
 "Overwrite dracula colorscheme for comments
-:hi Comment guifg=#63f05b
+hi Comment guifg=#04d9ff
+"Make comments italic
+hi Comment cterm=italic gui=italic
 
 " provide hjkl movements in Insert mode and Command-line mode via the <Alt> modifier key
 noremap! <A-h> <Left>
