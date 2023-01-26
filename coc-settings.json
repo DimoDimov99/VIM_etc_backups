@@ -1,15 +1,13 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["python"],
-
-  "python.jediPath": "/home/dimo/.local/lib/python3.8/site-packages",
+  "coc.preferences.formatOnSaveFiletypes": ["python, c"],
+  "pyright.enable": true,
   "clangd.enabled": true,
   "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.3/clangd_15.0.3/bin/clangd",
   "python.linting.pylintEnabled": true,
   "python.linting.enabled": true,
   "python.pythonPath": "/usr/bin/python3",
   "diagnostic.checkCurrentLine": true,
-  "coc.preferences.semanticTokensHighlights": false,
   "suggest.enablePreselect": false,
   "suggest.noselect": true,
-  "python.formatting.provider": "black"
+  "python.formatting.blackPath": "/home/dimo/.local/lib/python3.10/site-packages/black"
 }
