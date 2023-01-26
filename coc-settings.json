@@ -1,5 +1,5 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["python, c"],
+  "coc.preferences.formatOnSaveFiletypes": ["python"],
   "pyright.enable": true,
   "clangd.enabled": true,
   "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.3/clangd_15.0.3/bin/clangd",
